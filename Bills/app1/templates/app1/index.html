@@ -1,0 +1,31 @@
+
+{% extends "app1/base.html"%}
+<title>{% block title %} Index {% endblock title %}</title>
+
+{% block content %}
+
+<div style="background-image:url('https://cdn.fansshare.com/image/backgroundhd/green-background-flowers-hd-1880393433.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
+<h1 class="text-center alert alert-muted" style="font-family: Georgia, serif;"> Project Name :G-cart<span class="glyphicon glyphicon-leaf" style="color:green;"></span></h1>
+<br><br><br><br><br><br><br>
+
+<div style="text-align:left">
+<h1  style="font-family: Georgia, serif;color:black;font-weight: 700;">Submitted By:</h1><br>
+<h3  style="font-family: Georgia, serif;color:black;font-weight: 700;">Komal Paigavan</h3><br>
+
+</div>
+<div style="text-align:right">
+    <h1  style="font-family: Georgia, serif;color:black;font-weight: 700;">Guided By:</h1><br>
+    <h3  style="font-family: Georgia, serif;color:black;font-weight: 700;">Miss Neelam Chaudhary</h3><br><br>
+
+</div>
+
+<div>
+    <h3><a href="{% url 'signup' %}" style="text-align:center;">To see our project details ,please click here!! </a></h2><!--Here we entered the namespace of next index signup page-->
+</div>
+
+
+<br><br><br>
+
+
+
+{% endblock content %}

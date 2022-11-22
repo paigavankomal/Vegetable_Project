@@ -1,0 +1,22 @@
+{% extends "app1/base.html"%}
+<title>{% block title %} Signup {% endblock title %}</title>
+
+{% block content %}
+
+<div style="background-image: url('https://image.shutterstock.com/image-photo/flat-lay-top-view-fresh-260nw-1577945788.jpg'); background-repeat: no-repeat;background-size:100% 120%;">
+<h1 class="text-center alert alert-success" style="font-family: Georgia, serif;"> Sign-Up Here!!!!!<span class="glyphicon glyphicon-leaf" style="color:green;"></span></h1>
+<div class="container" >
+    <div class="col-sm-5 mx-4">
+    <form action="" method="post" novalidate>
+        {% csrf_token %}   <!--for importing the forms securatly from views.py file -->
+        {% for fm in form %}   <!--applied for loop -->
+        {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+        {% endfor %}  
+        
+        <input type="submit" value="Submit"> 
+    </form>
+        <h4 style="color:yellowgreen"> Already Registered? <a style="color:yellowgreen" href="{% url 'login' %}">Login Here</a></h4>
+        <br><br><br><br><br><br><br><br>
+    </div>
+</div>
+{% endblock content %}

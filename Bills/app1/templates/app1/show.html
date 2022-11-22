@@ -1,0 +1,16 @@
+{% extends 'app1/base.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-4 mx-4">
+        <h4 class="text-center alert alert-info"> Update Billing  form</h4>
+        <form action="" method="POST" >
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <input type="submit" > <!--after submit button form will be stored in the data base table-->
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
